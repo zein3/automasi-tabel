@@ -17,6 +17,8 @@ def main():
 
     input_folder = sys.argv[1]
     output_folder = sys.argv[2]
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
 
     # Loop melalui semua file di direktori sumber
     for filename in os.listdir(input_folder):
